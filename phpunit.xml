@@ -1,14 +1,12 @@
+<?xml version="1.0"?>
 <phpunit
-	bootstrap="vendor/xwp/wp-dev-lib/sample-config/phpunit-plugin-bootstrap.php"
+	bootstrap="tests/bootstrap.php"
 	backupGlobals="false"
 	colors="true"
 	convertErrorsToExceptions="true"
 	convertNoticesToExceptions="true"
 	convertWarningsToExceptions="true"
 	>
-	<php>
-		<const name="WP_TEST_ACTIVATED_PLUGINS" value="two-factor/two-factor.php" />
-	</php>
 	<testsuites>
 		<testsuite name="All Tests">
 			<directory suffix=".php">tests</directory>
