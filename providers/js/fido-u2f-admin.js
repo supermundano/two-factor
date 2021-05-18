@@ -1,4 +1,4 @@
-/* global u2f, u2fL10n */
+/* global u2fL10n, jQuery */
 ( function( $ ) {
 	var $button = $( '#register_security_key' );
 	var $statusNotice = $( '#security-keys-section .security-key-status' );
@@ -21,7 +21,7 @@
 
 		registerRequest = {
 			version: u2fL10n.register.request.version,
-			challenge: u2fL10n.register.request.challenge
+			challenge: u2fL10n.register.request.challenge,
 		};
 
 		window.u2f.register( u2fL10n.register.request.appId, [ registerRequest ], u2fL10n.register.sigs, function( data ) {
@@ -45,4 +45,4 @@
 			$( '<form>' )[0].submit.call( $( '#your-profile' )[0] );
 		} );
 	} );
-} )( jQuery );
+}( jQuery ) );
