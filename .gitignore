@@ -5,3 +5,4 @@
 /tests/logs/
 /wordpress/
 .DS_Store
+.wp-env.override.json
